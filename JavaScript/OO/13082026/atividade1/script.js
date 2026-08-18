@@ -45,6 +45,10 @@ class Prateleira {
             </div>
         `;
     });
+
+    // excluirProduto() {
+        
+    // }
 }};
 
 const prateleira = new Prateleira();
