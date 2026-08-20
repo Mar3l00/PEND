@@ -15,12 +15,12 @@ class Produto {
     }
 
 
-    
+
 }
 
 class Prateleira {
 
-    constructor() {   
+    constructor() {
         this.produtos = [];
     }
 
@@ -34,22 +34,25 @@ class Prateleira {
 
         resultado.innerHTML = "";
 
-        this.produtos.forEach(produto => {
+        this.produtos.forEach((produto, posicao) => {
 
-        resultado.innerHTML += `
+            resultado.innerHTML += `
             <div>
                 <p>Nome: ${produto.nome}</p>
                 <p>Preço: ${produto.AplicarDesconto()}</p>
                 <p>Categoria: ${produto.categoria}</p>
                 <p>Desconto: ${produto.desconto}</p>
+                <button onclick="prateleira.excluirProduto(${posicao})">Excluir</button>
             </div>
-        `;
-    });
 
-    // excluirProduto() {
-        
-    // }
-}};
+        `;
+        });
+    }
+    excluirProduto(posicao) {
+        this.produtos.splice(posicao, 1);
+        this.exibir();
+    }
+};
 
 const prateleira = new Prateleira();
 const nome = document.querySelector("#nome");
