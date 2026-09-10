@@ -9,12 +9,22 @@
     <!--Um site para captar a localização e a identificação facial para ver se o usúario/funcionario está no seu devido lugar-->
 </head>
 <body>
-    <h2>Exemplo - Geolocation + Câmera</h2>
+    <h2>Atividade - Geolocation + Câmera + Canvas</h2>
     <div id="localizacao">
         <p id="latitude"></p>
         <p id="longitude"></p>
         <video id="camera" autoplay></video>    
     </div>
+
+    <canvas id="canvas" style="display: none;"></canvas><br>
+
+    <button id="botao">Tirar foto</button><br>
+    
+    <div id="fotografia">
+        <img id="foto">
+    </div>
+
+    
     
 
     <script src="script.js"></script>
