@@ -31,9 +31,9 @@ async function buscarPokemon() {
 
             <p><strong>ID:</strong> ${dados.id}</p>
 
-            <p><strong>Altura:</strong> ${dados.height}</p>
+            <p><strong>Altura:</strong> ${dados.height / 10} M</p>
 
-            <p><strong>Peso:</strong> ${dados.weight}</p>
+            <p><strong>Peso:</strong> ${dados.weight / 10} Kg</p>
 
             <p>
                 <strong>Tipos:</strong>
